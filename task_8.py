@@ -5,6 +5,6 @@ def fib(num):
         return(fib(num - 2) + fib(num - 1))
 
 
-num = int(input('enter the number of the member of Fibonacci seqence you want to find '))
+num = int(input('enter the number of the member of Fibonacci sequence you want to find '))
 
 print(fib(num))
