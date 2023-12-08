@@ -1,11 +1,10 @@
-def count(n):
-    if n < 10:
+def count(num):
+    if num < 10:
         return 1
     else:
-        future_num = n / 10
+        future_num = num / 10
         return 1 + count(future_num)
 
 
-n = int(input('enter number '))
-print(count(n))
-
+num = int(input('enter number '))
+print(count(num))
