@@ -1,12 +1,14 @@
 def odd_list(a):
-    if a[0] % 2 == 0:
-        return [a[0]] + odd_list(a[1:])
+    if not a:
+        return []
     else:
-        return odd_list(a[1:])
+
+        if a[0] % 2 == 0:
+            return [a[0]] + odd_list(a[1:])
+        else:
+            return odd_list(a[1:])
 
 
-a = input("enter the list items separated by a space ").split()
-a = list(map(int, a))
+a = list(map(int, (input("enter the list items separated by a space ").split())))
 
-print(a)
 print(odd_list(a))
