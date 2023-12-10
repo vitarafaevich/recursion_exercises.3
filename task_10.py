@@ -10,7 +10,6 @@ def maxlist(a):
     print(a)
 
 
-
 a = [x for x in input('enter the list items separated by a space ').split()]
 
 print(maxlist(a))

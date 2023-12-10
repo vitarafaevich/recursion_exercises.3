@@ -1,19 +1,14 @@
-list = ()
+def ten_to_bin(x):
+    if x == 0:
+        return []
+    if x % 2 == 0:
+        return [0] + ten_to_bin(x/2)
+    else:
+        return [1] + ten_to_bin(x//2)
 
 
-def ten_to_bin(x, res=None):
-    if res is None:
-        res = []
-    if x // 2 == 0:
-        res.append()
-    elif x % 2 == 1:
-        return ten_to_bin(res.append(1), (x // 2))
-    elif x % 2 == 0:
-        return ten_to_bin(res.append(0), (x // 2))
-    return res
+x = int(input('enter a number to transfer it to the x2 system '))
 
-
-res = None
-x = int(input())
-
-print(ten_to_bin(x, res))
+res = ten_to_bin(x)
+result = ''.join(map(str, res[::-1]))
+print(result)
