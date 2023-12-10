@@ -2,7 +2,6 @@ def odd_list(a):
     if not a:
         return []
     else:
-
         if a[0] % 2 == 0:
             return [a[0]] + odd_list(a[1:])
         else:
