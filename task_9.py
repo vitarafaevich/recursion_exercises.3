@@ -1,8 +1,8 @@
 def combin(n, k):
-    if n == 0 or k == 0:
+    if n == k or k == 0:
         return 1
     else:
-        return((combin(n, k - 1)) + (combin(n - 1, k - 1)))
+        return((combin(n - 1, k)) + (combin(n - 1, k - 1)))
 
 
 n = int(input('enter the first number '))
